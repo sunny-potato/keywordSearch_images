@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.pageContainer {
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+  display: flex;
+  background-color: lightcyan;
+  flex-direction: column;
+}
+.headerContainer {
+  width: 100%;
+  padding: 1em;
+  background-color: lightblue;
+}
+.headerContainer h1 {
+  margin: 0 0 0.5em 0;
+  background-color: lightgrey;
+}
+.searchContainer {
+  background-color: lightgoldenrodyellow;
+}
+.mainContainer {
+  width: 100%;
+  padding: 1em;
+  background-color: lightyellow;
+}
+.displayImages {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footerContainer {
+}
+
+/* 1. display more than 100vw
+2. auto-resize img -> fit to width-size */
