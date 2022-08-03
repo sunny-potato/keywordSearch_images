@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Randomimage API</title>
+    <link rel="stylesheet" href="./src/search.css">
+  </head>
+
+  <body>
+    <div class="pageContainer">
+      <header class="headerContainer">
+        <h1>Images</h1>
+        <div class="searchContainer">
+          <label for="searchImage">Search Image</label>
+          <input type="text" class="searchImage" id="searchImage" placeholder="Keyword for image">
+          <button class="searchButton">Search</button>
+        </div>
+      </header>
+      <section class="mainContainer">
+        <div class="displayImages">
+        </div>
+        <div class="popupContainer">
+          <div class="popupImage"></div>
+          <div class="popupImageInfo"></div>
+          <div class="popupClose"> <button class="popupCloseButton"> X </button></div>
+
+        </div>
+      </section>
+      <footer class="footerContainer"></footer>
+    </div>
+
+    <script type="module" src="/src/search.js"></script>
+  </body>
+
+</html>

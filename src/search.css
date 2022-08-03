@@ -7,11 +7,12 @@
 
 .pageContainer {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   padding: 2em;
   display: flex;
   background-color: lightcyan;
   flex-direction: column;
+  position: relative;
 }
 .headerContainer {
   width: 100%;
@@ -26,16 +27,117 @@
   background-color: lightgoldenrodyellow;
 }
 .mainContainer {
-  width: 100%;
-  padding: 1em;
   background-color: lightyellow;
 }
 .displayImages {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  margin-top: 1em;
+  gap: 1em;
+  justify-content: center;
+  /* width: 100%; */
 }
+.eachImage {
+  max-height: 350px;
+  position: relative;
+}
+
+.eachImage img {
+  width: 100%;
+}
+
+.eachImage .imageInformation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgb(250, 249, 249);
+  opacity: 0;
+  transition: opacity 0.5s, border-top 0.1s, border-right 0.1s 0.2s,
+    border-bottom 0.2s 0.3s, border-left 0.3s 0.3s;
+}
+.eachImage .imageInformation:hover {
+  opacity: 0.7;
+  cursor: zoom-in;
+  border-top: 4px solid black;
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+  border-left: 4px solid black;
+}
+.popupContainer {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: beige;
+  box-shadow: 1em 1em 1em rgb(192, 191, 191);
+  visibility: hidden;
+  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  justify-content: center;
+  align-items: center;
+}
+
+.popupContainer > .popupImage {
+  /* background-color: lightgreen; */
+  width: 100%;
+  height: 70%;
+  position: relative;
+}
+.popupContainer > .popupImage > a {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  cursor: pointer;
+}
+
+.popupContainer > .popupImageInfo {
+  position: relative;
+  /* background-color: lightpink; */
+  width: 100%;
+  height: 30%;
+}
+.popupContainer > .popupImageInfo > div {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-20%, -20%);
+  line-height: 1.5em;
+  /* font-size: 1.2rem; */
+}
+.popupContainer > .popupImageInfo > div > div {
+  text-align: left;
+}
+
+.popupContainer > .popupImageInfo > div > div:last-child {
+  /* position: absolute; */
+  /* text-align: right; */
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+.popupClose {
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  top: 0;
+  right: 0;
+}
+.popupCloseButton {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .footerContainer {
 }
 
-/* 1. display more than 100vw
-2. auto-resize img -> fit to width-size */
+/* responsive size of image */
+/* Simple Masonry layouts with CSS Flexbox */
