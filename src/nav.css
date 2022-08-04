@@ -1,8 +1,8 @@
-:root {
+/* :root {
   --big_text: 2rem;
   --medium_text: 1.2rem;
   --small_text: 0.7rem;
-}
+} */
 
 * {
   margin: 0;
@@ -21,7 +21,7 @@ nav ul {
   display: flex;
   flex-direction: row;
   list-style: none;
-  gap: 2em;
+  gap: 3em;
 }
 
 li:nth-of-type(1) {
@@ -35,10 +35,10 @@ li:nth-of-type(5) {
 
 li a {
   text-decoration: none;
-  font-size: var(--medium_text);
+  font-size: 1.2rem;
   color: black;
 }
 
 li a:hover {
-  color: red;
+  color: #f4ad84;
 }

@@ -2,7 +2,7 @@
   /* --big_text: 2rem;
   --medium_text: 1.2rem;
   --small_text: 0.7rem; */
-  --camera_border: 2px solid black;
+  /* --camera_border: 2px solid black; */
 }
 
 *,
@@ -13,6 +13,7 @@
   box-sizing: border-box;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  background: #f6cfb8;
 }
 .pageContainer {
   width: 100vw;
@@ -51,6 +52,15 @@ section {
   border-radius: 1.2em;
   border: 2px solid black;
   position: relative;
+  animation: appearCamera 0.5s linear 1s forwards;
+}
+@keyframes appearCamera {
+  from {
+    transform: skew(45deg, -45deg);
+  }
+  to {
+    transform: skew(0deg, 0deg);
+  }
 }
 .cameraBody::before {
   position: absolute;
@@ -62,6 +72,7 @@ section {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   z-index: 0;
+  background: lightpink;
 }
 .cameraLens {
   position: absolute;
@@ -72,7 +83,7 @@ section {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 2px solid black;
-  /* background: hotpink; */
+  background: hotPink;
   /* z-index: 2; */
 }
 .cameraLens::before {
@@ -99,6 +110,7 @@ section {
   border: 2px solid black;
   transform: rotateZ(-40deg) skew(-0.312rad);
   /* z-index: 4; */
+  background: hotpink;
 }
 .cameraButton_1 {
   position: absolute;
@@ -108,6 +120,39 @@ section {
   left: 80%;
   border-radius: 1em;
   border: 2px solid black;
+}
+
+.cameraButton_1::before {
+  position: absolute;
+  content: "";
+  width: 200%;
+  aspect-ratio: 1/1;
+  top: -100%;
+  left: -100%;
+  transform: translate(25%, -15%);
+  border-radius: 50%;
+  visibility: hidden;
+  background: transparent;
+  animation: flash 0.5s linear 2s forwards;
+}
+
+@keyframes flash {
+  0% {
+    visibility: visible;
+    opacity: 1;
+    background: hsl(0, 0%, 100%);
+    box-shadow: 1em 1em 5em hsl(0, 0%, 100%);
+  }
+  50% {
+    visibility: visible;
+    opacity: 0.5;
+    background: hsl(0, 0%, 100%);
+    box-shadow: 1em 1em 5em hsl(0, 0%, 100%);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .cameraButton_2 {
@@ -157,6 +202,7 @@ section {
   justify-content: space-around;
   align-items: center;
   transform: rotateZ(35deg);
+  background: transparent;
 }
 
 .cameraFlash {
@@ -164,6 +210,7 @@ section {
   height: 0;
   border: 1px solid black;
   background: black;
+  animation: flashScale 0.5s linear 1s;
 }
 .flash_1 {
   transform: rotateZ(-35deg);
@@ -176,6 +223,14 @@ section {
 }
 .flash_4 {
   transform: rotateZ(40deg);
+}
+@keyframes flashScale {
+  from {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .homepageName {

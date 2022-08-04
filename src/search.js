@@ -122,7 +122,7 @@ function addImageData(imageInfo) {
 const popupCloseButton = document.querySelector(".popupCloseButton");
 popupCloseButton.addEventListener("click", () => {
   popupContainer.style.visibility = "hidden";
-  displayImages.style.display = "flex";
+  displayImages.style.display = "inline-block";
 });
 
 /* History API -> https://developer.mozilla.org/en-US/docs/Web/API/History_API 
