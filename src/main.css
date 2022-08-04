@@ -1,0 +1,195 @@
+:root {
+  /* --big_text: 2rem;
+  --medium_text: 1.2rem;
+  --small_text: 0.7rem; */
+  --camera_border: 2px solid black;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.pageContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-content: center; */
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  top: 30%;
+}
+.homepageImage {
+  width: 40%;
+  /* height: 50%; */
+  aspect-ratio: 16/9;
+  /* background: lightpink; */
+  margin-top: 5em;
+  margin-left: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cameraBody {
+  width: 70%;
+  /* height: 100%; */
+  aspect-ratio: 16/9;
+  border-radius: 1.2em;
+  border: 2px solid black;
+  position: relative;
+}
+.cameraBody::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 50%;
+  top: 25%;
+  left: 0%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  z-index: 0;
+}
+.cameraLens {
+  position: absolute;
+  width: 50%;
+  aspect-ratio: 1/1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid black;
+  /* background: hotpink; */
+  /* z-index: 2; */
+}
+.cameraLens::before {
+  position: absolute;
+  content: "";
+  width: 70%;
+  aspect-ratio: 1/1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px solid black;
+  /* z-index: 3; */
+}
+.cameraLens::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  aspect-ratio: 16/4;
+  top: 30%;
+  left: 20%;
+  transform: translate(-10%, -50%);
+  border-radius: 1em;
+  border: 2px solid black;
+  transform: rotateZ(-40deg) skew(-0.312rad);
+  /* z-index: 4; */
+}
+.cameraButton_1 {
+  position: absolute;
+  width: 15%;
+  aspect-ratio: 2/1;
+  top: 6%;
+  left: 80%;
+  border-radius: 1em;
+  border: 2px solid black;
+}
+
+.cameraButton_2 {
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 8/3;
+  top: -13.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid black;
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+}
+.cameraButton_2::before {
+  position: absolute;
+  content: "";
+  width: 70%;
+  aspect-ratio: 8/3;
+  top: 11%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid black;
+  border-radius: 0.5em;
+}
+
+.cameraButton_3 {
+  position: absolute;
+  width: 15%;
+  aspect-ratio: 4/1;
+  /* background: hotpink; */
+  top: -6.7%;
+  left: 5%;
+  border: 2px solid black;
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+}
+.cameraEffect {
+  position: absolute;
+  width: 30%;
+  /* height: 50%; */
+  aspect-ratio: 3.5/4;
+  /* background: hotpink; */
+  bottom: -20%;
+  right: -10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transform: rotateZ(35deg);
+}
+
+.cameraFlash {
+  width: 20%;
+  height: 0;
+  border: 1px solid black;
+  background: black;
+}
+.flash_1 {
+  transform: rotateZ(-35deg);
+}
+.flash_2 {
+  transform: rotateZ(-15deg);
+}
+.flash_3 {
+  transform: rotateZ(15deg);
+}
+.flash_4 {
+  transform: rotateZ(40deg);
+}
+
+.homepageName {
+  position: absolute;
+  width: 100%;
+  /* background-color: rgba(253, 220, 225, 0.787); */
+  /* top: 40%; */
+  left: 110%;
+  z-index: 1;
+  line-height: 1.5em;
+}
+
+.homepageName h1 {
+  font-weight: 900;
+  font-size: calc(1rem + 3vw);
+  line-height: 1.5em;
+}

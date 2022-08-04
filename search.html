@@ -6,21 +6,37 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Randomimage API</title>
+    <link rel="stylesheet" href="src/nav.css">
     <link rel="stylesheet" href="./src/search.css">
   </head>
 
   <body>
     <div class="pageContainer">
-      <header class="headerContainer">
-        <h1>Images</h1>
-        <div class="searchContainer">
-          <label for="searchImage">Search Image</label>
-          <input type="text" class="searchImage" id="searchImage" placeholder="Keyword for image">
-          <button class="searchButton">Search</button>
-        </div>
+      <header>
+        <nav>
+          <ul>
+            <li> <a href="index.html">All about photos</a>
+            </li>
+            <li> <a href="search.html" class="search">Keyword</a>
+            </li>
+            <li> <a href="#" class="category">Category</a>
+            </li>
+            <li> <a href="#" class="color">Color</a>
+            </li>
+            <li> <a href="#" class="contactMe">Contact Me</a>
+            </li>
+          </ul>
+        </nav>
       </header>
-      <section class="mainContainer">
-        <div class="displayImages">
+      <section>
+        <div class="searchContainer">
+          <h1>Search photos by keyword</h1>
+          <label for="searchImage"></label>
+          <input type="text" class="searchImage" id="searchImage" placeholder="Keyword for photos">
+          <button class="searchButton"> Search </button>
+        </div>
+        <div class="displayContainer">
+          <div class="displayImages"></div>
         </div>
         <div class="popupContainer">
           <div class="popupImage"></div>

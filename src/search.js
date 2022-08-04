@@ -18,9 +18,11 @@ const searchButton = document.querySelector(".searchButton");
 const searchImage = document.querySelector(".searchImage");
 
 searchButton.addEventListener("click", () => {
-  const queryImage = searchImage.value;
+  let queryImage = searchImage.value;
   searchPexels({ query: queryImage });
+  queryImage = "";
   // console.log(displayImages.childNodes.length);
+  // console.log("hei", searchImage.value);
 });
 
 // delete alle the images displayed on the screen when new keyword input
@@ -86,7 +88,7 @@ function addImage(image) {
   popupimageTag.setAttribute("alt", popupimageAlt);
   const popupImageLink = document.createElement("a");
   popupImageLink.setAttribute("href", image.url);
-  popupImageLink.setAttribute("target", "_bank");
+  popupImageLink.setAttribute("target", "_blank");
   popupImageLink.setAttribute(
     "title",
     "click the image to go to original image on Pexels"

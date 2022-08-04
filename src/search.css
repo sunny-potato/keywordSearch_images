@@ -7,28 +7,50 @@
 
 .pageContainer {
   width: 100vw;
-  height: 100%;
-  padding: 2em;
+  height: 100;
   display: flex;
-  background-color: lightcyan;
   flex-direction: column;
   position: relative;
 }
-.headerContainer {
+
+section {
   width: 100%;
-  padding: 1em;
-  background-color: lightblue;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-content: center;
+  /* background-color: lightcyan; */
 }
-.headerContainer h1 {
-  margin: 0 0 0.5em 0;
-  background-color: lightgrey;
-}
-.searchContainer {
+/* .searchContainer {
   background-color: lightgoldenrodyellow;
+} */
+
+.searchContainer h1 {
+  padding: 0.5em;
+  font-size: calc(1.2rem + 1vh);
 }
-.mainContainer {
-  background-color: lightyellow;
+
+.searchContainer input {
+  /* border: none; */
+  height: 2em;
+  padding: 0 1em;
+  /* box-shadow: 1em 1em 0.5em rgb(181, 180, 180), -1em -1em 1em rgb(181, 180, 180); */
 }
+
+.searchContainer button {
+  /* border: none; */
+  height: 2em;
+  padding: 0 1em;
+  background: lightgray;
+  /* box-shadow: 1em 1em 0.5em rgb(181, 180, 180), -1em -1em 1em rgb(181, 180, 180); */
+}
+
+.displayContainer {
+  width: 100%;
+  height: 100%;
+}
+
 .displayImages {
   display: flex;
   flex-direction: row;
@@ -36,7 +58,7 @@
   margin-top: 1em;
   gap: 1em;
   justify-content: center;
-  /* width: 100%; */
+  /* max-width: 100%; */
 }
 .eachImage {
   max-height: 350px;
