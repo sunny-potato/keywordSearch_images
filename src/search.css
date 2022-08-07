@@ -40,11 +40,28 @@ section {
 .searchContainer input {
   /* border: none; */
   height: 2em;
+  /* width: 20em; */
   padding: 0 1em;
-  /* box-shadow: 1em 1em 0.5em rgb(181, 180, 180), -1em -1em 1em rgb(181, 180, 180); */
+  /* box-shadow: 1em 1em 0.5em rgb(181, 180, 180), -1em -1em 1em rgb(181, 180, 180);
+  position: relative; */
+}
+label {
+  position: relative;
+}
+
+.keywordDeleteButton {
+  position: absolute;
+  visibility: hidden;
+  right: 0%;
+  border: none;
+  /* background: red; */
+  cursor: pointer;
 }
 .searchContainer input:hover,
-.searchContainer button:hover {
+.searchContainer button:hover,
+.popupCloseButton:hover,
+.keywordDeleteButton:hover {
+  transform: scale(1.05);
   box-shadow: 0 0 0.7em rgba(33, 33, 33, 0.2);
 }
 
@@ -55,6 +72,13 @@ section {
   background: lightgray;
   cursor: pointer;
   /* box-shadow: 1em 1em 0.5em rgb(181, 180, 180), -1em -1em 1em rgb(181, 180, 180); */
+}
+
+.noticeInvalidInfo {
+  visibility: hidden;
+  /* font-size: 0.8rem; */
+  color: red;
+  margin-top: 0.5em;
 }
 
 .displayContainer {
@@ -165,8 +189,9 @@ section {
 .popupCloseButton {
   width: 100%;
   height: 100%;
-  border: none;
+  /* border: none; */
   cursor: pointer;
+  background: #f6cfb8;
 }
 
 .footerContainer {

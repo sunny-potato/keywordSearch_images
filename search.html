@@ -19,7 +19,7 @@
             </li>
             <li> <a href="search.html" class="search">Keyword</a>
             </li>
-            <li> <a href="#" class="category">Category</a>
+            <li> <a href="locale.html" class="Location">Location</a>
             </li>
             <li> <a href="#" class="color">Color</a>
             </li>
@@ -31,9 +31,13 @@
       <section>
         <div class="searchContainer">
           <h1>Search photos by keyword</h1>
-          <label for="searchImage"></label>
-          <input type="text" class="searchImage" id="searchImage" placeholder="Keyword for photos" title="Search">
+          <label for="searchImage">
+            <input type="text" class="searchImage" id="searchImage" placeholder="Keyword for photos" title="Search">
+            <button class="keywordDeleteButton">X</button>
+          </label>
           <button class="searchButton"> Search </button>
+          <p class="noticeInvalidInfo">"The keyword is not valid"</p>
+
         </div>
         <div class="displayContainer">
           <div class="displayImages"></div>

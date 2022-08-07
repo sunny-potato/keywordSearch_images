@@ -9,20 +9,46 @@ async function searchPexels({ query, per_page = 10, page = 1 }) {
   if (!response.ok) {
     throw new Error("fetch didn't work : " + response.status);
   }
+
   const data = await response.json();
   const dataImages = data.photos;
-  setImageElement(dataImages);
+  console.log(dataImages);
+  if (dataImages.length === 0) {
+    noticeInvalidInfo.style.visibility = "visible";
+  } else {
+    noticeInvalidInfo.style.visibility = "hidden";
+    setImageElement(dataImages);
+  }
 }
 
 const searchButton = document.querySelector(".searchButton");
 const searchImage = document.querySelector(".searchImage");
+const keywordDeleteButton = document.querySelector(".keywordDeleteButton");
+const noticeInvalidInfo = document.querySelector(".noticeInvalidInfo");
 
 searchButton.addEventListener("click", () => {
-  let queryImage = searchImage.value;
-  searchPexels({ query: queryImage });
-  queryImage = "";
-  // console.log(displayImages.childNodes.length);
-  // console.log("hei", searchImage.value);
+  if (searchImage.value === "") {
+    deleteAllImages();
+    noticeInvalidInfo.style.visibility = "visible";
+  } else {
+    noticeInvalidInfo.style.visibility = "hidden";
+    keywordDeleteButton.style.visibility = "visible";
+    searchPexels({ query: searchImage.value });
+  }
+});
+
+searchImage.addEventListener("input", (event) => {
+  if (event.target.value !== "") {
+    noticeInvalidInfo.style.visibility = "hidden";
+    keywordDeleteButton.style.visibility = "visible";
+  } else {
+    keywordDeleteButton.style.visibility = "hidden";
+  }
+});
+
+keywordDeleteButton.addEventListener("click", () => {
+  searchImage.value = "";
+  keywordDeleteButton.style.visibility = "hidden";
 });
 
 // delete alle the images displayed on the screen when new keyword input
@@ -60,7 +86,6 @@ function setImageElement(images) {
   const allImages = displayImages.childNodes;
   for (let i = 0; i < allImages.length; i++) {
     allImages[i].addEventListener("click", () => {
-      // console.log(i, images[i], allImages[i]);
       displayFullImage(images[i]);
     });
   }
@@ -95,7 +120,6 @@ function addImage(image) {
   );
   popupImageLink.appendChild(popupimageTag);
   popupImage.appendChild(popupImageLink);
-  // console.log(image);
 }
 
 const popupImageInfo = document.querySelector(".popupImageInfo");
