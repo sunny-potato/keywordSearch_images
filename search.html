@@ -8,6 +8,10 @@
     <title>Randomimage API</title>
     <link rel="stylesheet" href="src/nav.css">
     <link rel="stylesheet" href="./src/search.css">
+    <link rel="stylesheet" href="./src/search_popup.css">
+    <link rel="stylesheet" href="./src/search_filter.css">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
 
   <body>
@@ -31,28 +35,103 @@
       <section>
         <div class="searchContainer">
           <h1>Search photos by keyword</h1>
-          <label for="searchImage">
-            <input type="text" class="searchImage" id="searchImage" placeholder="Keyword for photos" title="Search">
-            <button class="keywordDeleteButton">X</button>
-          </label>
-          <button class="searchButton"> Search </button>
+          <div class="searchBar">
+            <label for="searchImage"> </label>
+            <input type="text" class="searchImage" id="searchImage" placeholder="Search for photos" title="Search"
+              autofocus>
+            <div class="searchBarWrapper">
+              <button class="keywordDeleteButton">X</button>
+              <button class="searchButton"> <span class="material-symbols-outlined">
+                  search
+                </span></button>
+            </div>
+          </div>
           <p class="noticeInvalidInfo">"The keyword is not valid"</p>
 
         </div>
+
         <div class="displayContainer">
+          <div class="filterContainer">
+            <div class="filterIcon">
+              <h2>Filter</h2>
+              <span class="material-symbols-outlined">
+                tune
+              </span>
+            </div>
+            <div class="filter">
+              <input type="checkbox" id="filterOrientation">
+              <label for="filterOrientation">Orientation<span class="material-symbols-outlined expandIcon">
+                  expand_more
+                </span></label>
+              <div>
+                <input type="checkbox" id="optionLandscape">
+                <label for="optionLandscape">Landscape</label>
+                <input type="checkbox" id="optionPortrait">
+                <label for="optionPortrait">Portrait</label>
+                <input type="checkbox" id="optionSquare">
+                <label for="optionSquare">Square</label>
+              </div>
+            </div>
+            <div class="filter">
+              <input type="checkbox" id="filterSize">
+              <label for="filterSize">Size<span class="material-symbols-outlined expandIcon">
+                  expand_more
+                </span></label>
+              <div>
+                <input type="checkbox" id="optionLarge">
+                <label for="optionLarge">Large</label>
+                <input type="checkbox" id="optionMedium">
+                <label for="optionMedium">Medium</label>
+                <input type="checkbox" id="optionSmall">
+                <label for="optionSmall">Small</label>
+              </div>
+            </div>
+            <div class="filter">
+              <input type="checkbox" id="filterColor">
+              <label for="filterColor">Color<span class="material-symbols-outlined expandIcon">
+                  expand_more
+                </span></label>
+              <div>
+                <input type="checkbox" id="optionRed">
+                <label for="optionRed">Red</label>
+                <input type="checkbox" id="optionOrange">
+                <label for="optionOrange">Orange</label>
+                <input type="checkbox" id="optionYellow">
+                <label for="optionYellow">Yellow</label>
+                <input type="checkbox" id="optionGreen">
+                <label for="optionGreen">Green</label>
+                <input type="checkbox" id="optionTurquoise">
+                <label for="optionTurquoise">Turquoise</label>
+                <input type="checkbox" id="optionBlue">
+                <label for="optionBlue">Blue</label>
+                <input type="checkbox" id="optionViolet">
+                <label for="optionViolet">Violet</label>
+                <input type="checkbox" id="optionPink">
+                <label for="optionPink">Pink</label>
+                <input type="checkbox" id="optionBrown">
+                <label for="optionBrown">Brown</label>
+                <input type="checkbox" id="optionBlack">
+                <label for="optionBlack">Black</label>
+                <input type="checkbox" id="optionGray">
+                <label for="optionGray">Gray</label>
+                <input type="checkbox" id="optionWhite">
+                <label for="optionWhite">White</label>
+              </div>
+            </div>
+          </div>
           <div class="displayImages"></div>
         </div>
         <div class="popupContainer">
           <div class="popupImage"></div>
           <div class="popupImageInfo"></div>
           <div class="popupClose"> <button class="popupCloseButton"> X </button></div>
-
         </div>
       </section>
       <footer class="footerContainer"></footer>
     </div>
 
     <script type="module" src="/src/search.js"></script>
+    <script type="module" src="/src/search_filter.js"></script>
   </body>
 
 </html>
