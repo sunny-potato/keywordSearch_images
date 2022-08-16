@@ -5,6 +5,7 @@ const popupImage = document.querySelector(".popupImage");
 
 export function displayFullImage(activeImage) {
   const currentImage = activeImage;
+  console.log(currentImage);
   if (popupImage.firstChild || popupImageInfo.firstChild) {
     popupImage.removeChild(popupImage.firstChild);
     popupImageInfo.removeChild(popupImageInfo.firstChild);
@@ -57,4 +58,5 @@ const popupCloseButton = document.querySelector(".popupCloseButton");
 popupCloseButton.addEventListener("click", () => {
   popupContainer.style.visibility = "hidden";
   displayContainer.style.display = "inline-block";
+  // history.scrollRestoration = "manual";
 });

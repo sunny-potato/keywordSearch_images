@@ -69,6 +69,7 @@ export function setImageElement(images) {
     imageDiv.appendChild(imageTag);
     imageDiv.appendChild(imageInfo);
     displayImages.appendChild(imageDiv);
+    // history.pushState(null, null, `search/${image.id}`);
 
     // const imageInformation = document.querySelector(
     //   `div.imageIndex_${index}>.imageInformation`
