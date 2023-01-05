@@ -50,7 +50,7 @@ function deleteAllImages() {
 // display images from the result of data
 export function setImageElement(images) {
   deleteAllImages();
-
+  console.log(images);
   images.forEach((image, index) => {
     const imageTag = document.createElement("img");
     const imageUrl = image.src.medium;

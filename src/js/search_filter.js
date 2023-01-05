@@ -16,20 +16,19 @@ orientationOptions.forEach((option) =>
   option.addEventListener("change", (option) => {
     if (option.target.checked) {
       checkedOrientation = option.target.id.replace("option", "");
-      console.log(checkedOrientation);
       orientationFilter.checked = false;
       const displayOrientation = orientationFilter.nextElementSibling;
       if (checkedOrientation === "Allorientations") {
         displayOrientation.textContent = "All orientations";
-        checkedOrientation = "orientation";
+        checkedOrientation = undefined;
       } else {
         displayOrientation.textContent = `${checkedOrientation}`;
+        checkedOrientation = checkedOrientation.toLowerCase();
       }
       displayOrientation.style.backgroundColor = "lightgrey";
-      console.log(checkedOrientation);
       searchParmeters({
         query: currentKeyword,
-        orientation: checkedOrientation.toLowerCase(),
+        orientation: checkedOrientation,
         size: checkedSize,
         color: checkedColor,
       }).then((data) => {
@@ -59,7 +58,6 @@ sizeOptions.forEach((option) =>
         displaySize.textContent = `${checkedSize}`;
       }
       displaySize.style.backgroundColor = "lightgrey";
-      console.log(checkedOrientation, checkedSize, checkedColor);
       searchParmeters({
         query: currentKeyword,
         orientation: checkedOrientation,
@@ -91,7 +89,6 @@ colorOptions.forEach((option) => {
         displayColor.textContent = `${checkedColor}`;
       }
       displayColor.style.backgroundColor = "lightgrey";
-      console.log(checkedOrientation, checkedSize, checkedColor);
       searchParmeters({
         query: currentKeyword,
         orientation: checkedOrientation,

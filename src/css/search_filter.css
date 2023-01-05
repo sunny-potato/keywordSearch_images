@@ -13,7 +13,6 @@
 }
 .filter {
   width: fit-content;
-  /* background-color: white; */
   margin: 0 0.5em;
   z-index: 5;
   box-shadow: 0 0 0.7em rgba(33, 33, 33, 0.2);
@@ -32,7 +31,6 @@ label {
 input[id^="filter"] + label[for^="filter"] + div {
   max-height: 0;
   overflow: hidden;
-  /* background-color: white; */
 }
 label[for^="filter"] {
   position: relative;

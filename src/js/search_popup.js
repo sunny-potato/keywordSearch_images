@@ -1,4 +1,3 @@
-const displayImages = document.querySelector(".displayImages");
 const displayContainer = document.querySelector(".displayContainer");
 const popupContainer = document.querySelector(".popupContainer");
 const popupImage = document.querySelector(".popupImage");
@@ -58,5 +57,4 @@ const popupCloseButton = document.querySelector(".popupCloseButton");
 popupCloseButton.addEventListener("click", () => {
   popupContainer.style.visibility = "hidden";
   displayContainer.style.display = "inline-block";
-  // history.scrollRestoration = "manual";
 });

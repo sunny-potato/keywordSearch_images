@@ -77,9 +77,6 @@ section {
 .searchContainer button:hover,
 .popupCloseButton:hover,
 .keywordDeleteButton:hover {
-  /* transform: scale(1.2); */
-  /* box-shadow: 0.3em 0.3em 1.5em rgb(181, 180, 180); */
-  /* box-shadow: 0 0 0.7em rgba(33, 33, 33, 0.2); */
   background-color: rgb(234, 234, 234);
 }
 
@@ -143,7 +140,3 @@ section {
   border-bottom: 2px solid black;
   border-left: 2px solid black;
 }
-
-/* responsive size of image */
-/* @media query */
-/* history API */

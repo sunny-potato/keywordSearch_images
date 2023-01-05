@@ -1,5 +1,5 @@
 // get data from API
-export async function searchPexels({ query, per_page = 20, page = 2 }) {
+export async function searchPexels({ query, per_page = 100, page = 1 }) {
   const url = `https://api.pexels.com/v1/search?query=${query}&per_page=${per_page}&page=${page}`;
   const response = await fetch(url, {
     headers: {
@@ -20,7 +20,7 @@ export async function searchParmeters({
   orientation = undefined,
   size = undefined,
   color = undefined,
-  per_page = 10,
+  per_page = 100,
   page = 1,
 }) {
   const url = `https://api.pexels.com/v1/search?query=${query}&orientation=${orientation}&size=${size}&color=${color}&per_page=${per_page}&page=${page}`;
@@ -32,8 +32,6 @@ export async function searchParmeters({
   if (!response.ok) {
     throw new Error("fetch didn't work : " + response.status);
   }
-
-  // console.log(orientation);
   const data = await response.json();
   return data;
 }
