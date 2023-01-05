@@ -9,6 +9,7 @@ It is to find free images provided by Pexels API(www.pexels.com) with keyword.
 - HTML
 - REST API
 - Vite
+- [![Netlify Status](https://api.netlify.com/api/v1/badges/d5fe4472-5796-4944-aae6-79ad6684c5a8/deploy-status)](https://app.netlify.com/sites/searchimage-sunhee/deploys)
 
 ## Link
 
