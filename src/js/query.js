@@ -1,5 +1,5 @@
 // get data from API
-export async function searchPexels({ query, per_page = 10, page = 1 }) {
+export async function searchPexels({ query, per_page = 20, page = 2 }) {
   const url = `https://api.pexels.com/v1/search?query=${query}&per_page=${per_page}&page=${page}`;
   const response = await fetch(url, {
     headers: {

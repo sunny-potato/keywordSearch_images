@@ -1,10 +1,3 @@
-:root {
-  /* --big_text: 2rem;
-  --medium_text: 1.2rem;
-  --small_text: 0.7rem; */
-  /* --camera_border: 2px solid black; */
-}
-
 *,
 *::before,
 *::after {
@@ -16,46 +9,34 @@
   background: #f6cfb8;
 }
 .pageContainer {
-  /* width: 100vw; */
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-content: center; */
 }
 
-section {
+.contentContainer {
   width: 100%;
   height: 100%;
-  /* display: flex;
-  justify-content: start;
-  align-items: start; */
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-bottom: 5em; */
   display: flex;
-  justify-content: start;
-  align-items: center;
-  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  /* position: relative; */
 }
+
 .homepageImage {
   width: 40%;
-  /* height: 50%; */
   aspect-ratio: 16/9;
-  /* background: lightpink; */
   margin-top: 5em;
-  margin-left: 5em;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  /* background-color: white; */
 }
 
 .cameraBody {
+  margin-left: 2rem;
   width: 70%;
-  /* height: 100%; */
   aspect-ratio: 16/9;
   border-radius: 1.2em;
   border: 2px solid black;
@@ -92,7 +73,6 @@ section {
   border-radius: 50%;
   border: 2px solid black;
   background: hotPink;
-  /* z-index: 2; */
 }
 .cameraLens::before {
   position: absolute;
@@ -104,7 +84,6 @@ section {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 2px solid black;
-  /* z-index: 3; */
 }
 .cameraLens::after {
   position: absolute;
@@ -117,7 +96,6 @@ section {
   border-radius: 1em;
   border: 2px solid black;
   transform: rotateZ(-40deg) skew(-0.312rad);
-  /* z-index: 4; */
   background: hotpink;
 }
 .cameraButton_1 {
@@ -190,7 +168,6 @@ section {
   position: absolute;
   width: 15%;
   aspect-ratio: 4/1;
-  /* background: hotpink; */
   top: -6.7%;
   left: 5%;
   border: 2px solid black;
@@ -200,11 +177,9 @@ section {
 .cameraEffect {
   position: absolute;
   width: 30%;
-  /* height: 50%; */
   aspect-ratio: 3.5/4;
-  /* background: hotpink; */
-  bottom: -20%;
-  right: -10%;
+  bottom: -30%;
+  right: -20%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -241,32 +216,31 @@ section {
   }
 }
 
-.homepageName {
-  position: absolute;
-  /* background-color: rgba(253, 220, 225, 0.787); */
-  /* top: 40%; */
-  left: 110%;
-  z-index: 1;
-  /* line-height: 1.5em; */
+.homepageTitle {
+  /* align-items: center; */
+  margin-top: 5rem;
+  margin-left: 1rem;
+  /* background-color: lightpink; */
 }
-
-.homepageName h1 {
+.homepageTitle h1:last-child {
+  background-color: lightpink;
+  color: lightpink;
+}
+.homepageTitle h1 {
   font-weight: 900;
-  font-size: calc(1rem + 3vw);
-  /* line-height: 1.5em; */
+  font-size: calc(1.2rem + 2vw);
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0;
-  /* background-color: white; */
   padding: 1em 0;
   border-top: 2px solid black;
   line-height: 1.5em;
   text-align: center;
   font-style: italic;
 }
-.noticeInformation {
+/* .noticeInformation {
   display: block;
-}
+} */

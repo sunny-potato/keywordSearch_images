@@ -1,6 +1,5 @@
-// import { createFilter } from "vite";
-import { searchParmeters } from "/src/query";
-import { setImageElement, currentKeyword } from "/src/search";
+import { searchParmeters } from "./query.js";
+import { setImageElement, currentKeyword } from "./search.js";
 
 let checkedOrientation;
 let checkedSize;
@@ -17,22 +16,20 @@ orientationOptions.forEach((option) =>
   option.addEventListener("change", (option) => {
     if (option.target.checked) {
       checkedOrientation = option.target.id.replace("option", "");
+      console.log(checkedOrientation);
       orientationFilter.checked = false;
       const displayOrientation = orientationFilter.nextElementSibling;
       if (checkedOrientation === "Allorientations") {
         displayOrientation.textContent = "All orientations";
-        checkedOrientation = undefined;
+        checkedOrientation = "orientation";
       } else {
         displayOrientation.textContent = `${checkedOrientation}`;
       }
-
-      // const expandIcon = document.querySelector("span.expandIcon");
-      // orientationFilter.nextElementSibling.appendChild(expandIcon);
-      // orientationFilter.nextElementSibling.appendChild(expandIcon);
       displayOrientation.style.backgroundColor = "lightgrey";
+      console.log(checkedOrientation);
       searchParmeters({
         query: currentKeyword,
-        orientation: checkedOrientation,
+        orientation: checkedOrientation.toLowerCase(),
         size: checkedSize,
         color: checkedColor,
       }).then((data) => {
@@ -83,19 +80,15 @@ const colorOptions = document.querySelectorAll(
 const colorFilter = document.querySelector('input[id="filterColor"]');
 colorOptions.forEach((option) => {
   option.addEventListener("change", (option) => {
-    // eachOptionColor.style.backgroundColor = `${checkedColor}`;
     if (option.target.checked) {
       checkedColor = option.target.id.replace("option", "");
       colorFilter.checked = false;
       const displayColor = colorFilter.nextElementSibling;
       if (checkedColor === "Allcolors") {
         displayColor.textContent = "All colors";
-        // displayColor.style.backgroundImage =
-        //   "linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red)";
         checkedColor = undefined;
       } else {
         displayColor.textContent = `${checkedColor}`;
-        // displayColor.style.backgroundImage = "transparent";
       }
       displayColor.style.backgroundColor = "lightgrey";
       console.log(checkedOrientation, checkedSize, checkedColor);

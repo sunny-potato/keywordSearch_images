@@ -6,10 +6,10 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Randomimage API</title>
-    <link rel="stylesheet" href="./src/nav.css">
-    <link rel="stylesheet" href="./src/search.css">
-    <link rel="stylesheet" href="./src/search_popup.css">
-    <link rel="stylesheet" href="./src/search_filter.css">
+    <link rel="stylesheet" href="./src/css/nav.css">
+    <link rel="stylesheet" href="./src/css/search.css">
+    <link rel="stylesheet" href="./src/css/search_popup.css">
+    <link rel="stylesheet" href="./src/css/search_filter.css">
     <link rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
@@ -19,22 +19,16 @@
       <header>
         <nav>
           <ul>
-            <li> <a href="index.html">All about photos</a>
+            <li> <a href="index.html">Home</a>
             </li>
-            <li> <a href="search.html" class="search">Keyword</a>
-            </li>
-            <li> <a href="locale.html" class="Location">Location</a>
-            </li>
-            <li> <a href="#" class="color">Color</a>
-            </li>
-            <li> <a href="#" class="contactMe">Contact Me</a>
+            <li> <a href="search.html" class="search">Keyword search</a>
             </li>
           </ul>
         </nav>
       </header>
       <section>
         <div class="searchContainer">
-          <h1>Search photos by keyword</h1>
+          <h1>Search by keyword</h1>
           <div class="searchBar">
             <label for="searchImage"> </label>
             <input type="text" class="searchImage" id="searchImage" placeholder="Search for photos" title="Search"
@@ -133,9 +127,8 @@
       </section>
       <footer class="footerContainer"></footer>
     </div>
-
-    <script type="module" src="/src/search.js"></script>
-    <script type="module" src="/src/search_filter.js"></script>
+    <script type="module" src="/src/js/search.js"></script>
+    <script type="module" src="/src/js/search_filter.js"></script>
   </body>
 
 </html>

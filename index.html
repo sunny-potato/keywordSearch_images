@@ -6,8 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PEXELS API</title>
-        <link rel="stylesheet" href="./src/nav.css">
-        <link rel="stylesheet" href="./src/main.css">
+        <link rel="stylesheet" href="./src/css/main.css">
+        <link rel="stylesheet" href="./src/css/nav.css">
+        <!-- <link rel="stylesheet" href="./src/css/search.css">
+        <link rel="stylesheet" href="./src/css/search_popup.css">
+        <link rel="stylesheet" href="./src/css/search_filter.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+
     </head>
 
     <body>
@@ -15,42 +21,35 @@
             <header>
                 <nav>
                     <ul>
-                        <li> <a href="index.html">All about photos</a>
+                        <li> <a href="index.html">Home</a>
                         </li>
-                        <li> <a href="search.html" class="search">Keyword</a>
-                        </li>
-                        <li> <a href="locale.html" class="Location">Location</a>
-                        </li>
-                        <li> <a href="#" class="color">Color</a>
-                        </li>
-                        <li> <a href="#" class="contactMe">Contact Me</a>
+                        <li> <a href="search.html" class="search">Keyword search</a>
                         </li>
                     </ul>
                 </nav>
             </header>
-            <section>
+            <section class="contentContainer">
                 <div class="homepageImage">
                     <div class="cameraBody">
                         <div class="cameraButton_1"></div>
                         <div class="cameraButton_2"></div>
                         <div class="cameraButton_3"></div>
                         <div class="cameraLens"></div>
+                        <div class="cameraEffect">
+                            <div class="cameraFlash flash_1"></div>
+                            <div class="cameraFlash flash_2"></div>
+                            <div class="cameraFlash flash_3"></div>
+                            <div class="cameraFlash flash_4"></div>
+                        </div>
                     </div>
-                    <div class="cameraEffect">
-                        <div class="cameraFlash flash_1"></div>
-                        <div class="cameraFlash flash_2"></div>
-                        <div class="cameraFlash flash_3"></div>
-                        <div class="cameraFlash flash_4"></div>
-                    </div>
-                    <div class="homepageName">
-                        <h1>P</h1>
-                        <h1>Ph</h1>
-                        <h1>Phot</h1>
-                        <h1>Photo</h1>
-                        <h1>Photos</h1>
-
-
-                    </div>
+                </div>
+                <div class="homepageTitle">
+                    <h1>P</h1>
+                    <h1>Ph</h1>
+                    <h1>Phot</h1>
+                    <h1>Photo</h1>
+                    <h1>Photos</h1>
+                    <h1>Memory</h1>
                 </div>
             </section>
             <footer>
@@ -61,7 +60,9 @@
                 </div>
             </footer>
         </div>
-        <script src="./src/main.js"></script>
+        <!-- <script src="./src/js/main.js"></script> -->
+        <!-- <script type="module" src="/src/js/search.js"></script>
+        <script type="module" src="/src/js/search_filter.js"></script> -->
     </body>
 
 </html>

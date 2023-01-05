@@ -1,5 +1,5 @@
-import { searchPexels } from "/src/query";
-import { displayFullImage } from "/src/search_popup";
+import { searchPexels } from "./query.js";
+import { displayFullImage } from "./search_popup.js";
 
 const searchButton = document.querySelector(".searchButton");
 const searchImage = document.querySelector(".searchImage");
@@ -35,10 +35,7 @@ searchImage.addEventListener("input", (event) => {
 });
 
 keywordDeleteButton.addEventListener("click", () => {
-  // console.log(currentKeyword, searchImage.value);
   searchImage.value = "";
-  // currentKeyword = searchImage.value;
-  // console.log(currentKeyword, searchImage.value);
   keywordDeleteButton.style.visibility = "hidden";
 });
 
@@ -69,11 +66,6 @@ export function setImageElement(images) {
     imageDiv.appendChild(imageTag);
     imageDiv.appendChild(imageInfo);
     displayImages.appendChild(imageDiv);
-    // history.pushState(null, null, `search/${image.id}`);
-
-    // const imageInformation = document.querySelector(
-    //   `div.imageIndex_${index}>.imageInformation`
-    // );
   });
   const allImages = displayImages.childNodes;
   for (let i = 0; i < allImages.length; i++) {

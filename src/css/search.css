@@ -10,8 +10,6 @@ body {
 }
 
 .pageContainer {
-  /* width: 100vw;
-  height: 100; */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -24,11 +22,9 @@ section {
   flex-direction: column;
   justify-content: start;
   align-content: center;
-  /* background-color: lightcyan; */
 }
 
 .searchContainer {
-  /* background-color: lightgreen; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,18 +32,13 @@ section {
 }
 
 .searchContainer > h1 {
-  /* padding: 0.5em; */
-  padding: 0.5em 0;
-  font-size: 2rem;
+  padding: 1em 0;
+  font-size: 1.2rem;
 }
 .searchBar {
   height: 3em;
-  width: 50%;
-  /* left: 50%;
-  transform: translateX(-50%); */
+  width: 60%;
   position: relative;
-  /* background-color: aqua; */
-  /* display: block; */
 }
 
 .searchBar > input {
@@ -56,18 +47,20 @@ section {
   height: 100%;
   border-radius: 0.5em;
   box-shadow: 0 0 0.7em rgba(33, 33, 33, 0.2);
-  /* background-color: lightblue; */
+  background-color: white;
 }
 
 .searchBarWrapper {
   position: absolute;
-  /* background-color: aquamarine; */
+  background-color: white;
   top: 0;
   right: 0;
   bottom: 0;
   display: flex;
+  margin: 1px;
   justify-content: space-between;
   align-items: center;
+  border-radius: 2em;
 }
 
 .keywordDeleteButton {
@@ -91,7 +84,6 @@ section {
 }
 
 .searchButton {
-  /* position: absolute; */
   height: 3em;
   padding: 0 0.5em;
   border-radius: 2em;
@@ -99,11 +91,15 @@ section {
   border: none;
   background: transparent;
   cursor: pointer;
+  background-color: white;
+}
+
+.searchButton .material-symbols-outlined {
+  background-color: white;
 }
 
 .noticeInvalidInfo {
   visibility: hidden;
-  /* font-size: 0.8rem; */
   color: red;
   margin-top: 0.5em;
 }
@@ -112,19 +108,16 @@ section {
   width: 100%;
   height: 100%;
   padding: 1em;
-  /* background-color: white; */
 }
 
 .displayImages {
   display: inline-block;
   columns: 4;
   gap: 1em;
-  /* padding: 1em; */
   width: 100%;
 }
 .eachImage {
   position: relative;
-  /* margin: 1em; */
 }
 
 .eachImage img {
@@ -149,9 +142,6 @@ section {
   border-right: 2px solid black;
   border-bottom: 2px solid black;
   border-left: 2px solid black;
-}
-
-.footerContainer {
 }
 
 /* responsive size of image */
