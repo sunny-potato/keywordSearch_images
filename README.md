@@ -14,7 +14,7 @@ It is to find free images provided by Pexels API(www.pexels.com) with keyword.
 
 - Link to deployed project -> [Keyword search images](address)
 - Preview of the project
--> ![](searchImage.gif)
+- ![](searchImage.gif)
 
 ## Features
 
