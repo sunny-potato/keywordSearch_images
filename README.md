@@ -12,7 +12,7 @@ It is to find free images provided by Pexels API(www.pexels.com) with keyword.
 
 ## Link
 
-- Link to deployed project -> [Keyword search images](address)
+- Link to deployed project -> [Keyword search images](searchimage-sunhee.netlify.app)
 - Preview of the project
 - ![](searchImage.gif)
 
