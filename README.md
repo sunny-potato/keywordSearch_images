@@ -4,7 +4,7 @@ It is to find free images provided by Pexels API(www.pexels.com) with keyword.
 
 ## Technologies
 
-- Javascripts
+- Javascript
 - CSS
 - HTML
 - REST API
