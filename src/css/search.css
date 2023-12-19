@@ -76,7 +76,8 @@ section {
 
 .searchContainer button:hover,
 .popupCloseButton:hover,
-.keywordDeleteButton:hover {
+.keywordDeleteButton:hover,
+.searchButton .material-symbols-outlined:hover {
   background-color: rgb(234, 234, 234);
 }
 

@@ -8,7 +8,8 @@ const noticeInvalidInfo = document.querySelector(".noticeInvalidInfo");
 const filterContainer = document.querySelector(".filterContainer");
 
 export let currentKeyword;
-searchButton.addEventListener("click", () => {
+
+function executeSearch() {
   currentKeyword = searchImage.value;
   searchPexels({ query: currentKeyword }).then((data) => {
     const dataImages = data.photos;
@@ -23,6 +24,12 @@ searchButton.addEventListener("click", () => {
       setImageElement(dataImages);
     }
   });
+}
+searchButton.addEventListener("click", executeSearch);
+searchImage.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    executeSearch();
+  }
 });
 
 searchImage.addEventListener("input", (event) => {

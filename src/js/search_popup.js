@@ -1,6 +1,9 @@
 const displayContainer = document.querySelector(".displayContainer");
 const popupContainer = document.querySelector(".popupContainer");
 const popupImage = document.querySelector(".popupImage");
+const popupBackgroundContainer = document.querySelector(
+  ".popupBackgroundContainer"
+);
 
 export function displayFullImage(activeImage) {
   const currentImage = activeImage;
@@ -13,6 +16,7 @@ export function displayFullImage(activeImage) {
   addImageData(currentImage);
   popupContainer.style.visibility = "visible";
   displayContainer.style.display = "none";
+  popupBackgroundContainer.style.visibility = "visible";
 }
 
 function addImage(image) {
@@ -57,4 +61,5 @@ const popupCloseButton = document.querySelector(".popupCloseButton");
 popupCloseButton.addEventListener("click", () => {
   popupContainer.style.visibility = "hidden";
   displayContainer.style.display = "inline-block";
+  popupBackgroundContainer.style.visibility = "hidden";
 });
